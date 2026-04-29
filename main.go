@@ -477,9 +477,7 @@ func startCLI() {
 func main() {
 	cliMode := flag.Bool("cli", false, "Start CLI interactive mode (default: start HTTP server)")
 	flag.Parse()
-
 	defer manager.resultFile.Close()
-
 	if *cliMode {
 		startCLI()
 	} else {
